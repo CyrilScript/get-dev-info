@@ -7,17 +7,21 @@
 `npx create-expo-app get-dev-info`
 
 `cd get-dev-info`
+
 2. check initialised project works
 
 `npm run android`
+
 3. Install necessary libraries
 
 `npm install react-native-device-info`
 `npm install expo-dev-client`
+
 4. import installed libraries
 
 `import DeviceInfo from 'react-native-device-info';`
 `import 'expo-dev-client';`
+
 5. Initialize EAS Build
 
 `eas build:configure`
@@ -37,9 +41,11 @@
     "production": {}
   }
 }
+
 7. change your code to get device id
 
-`import { StatusBar } from 'expo-status-bar';
+```javascript
+import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import DeviceInfo from 'react-native-device-info';
 import 'expo-dev-client';
@@ -63,7 +69,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});`
+}); 
+```
+
 8. Create a build for emulator/simulator
 
 after creating the development build. we can continue developing app using react-native-device-info . the created build will be a custom expo app.
